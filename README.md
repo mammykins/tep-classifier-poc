@@ -2,6 +2,8 @@
 
 This repository contains a **Minimum Viable Product (MVP)** for implementing automated comment analysis on large volumes of institutional feedback, such as surveys collected from pupils, employees, or other stakeholders. The system uses a zero-shot approach to immediately classify free-text comments (simulated here as student feedback) into actionable categories, like **positive** or **negative** sentiment.  
 
+The data is simulated (made-up comments) for demonstration purposes, but the architecture is designed to be easily adaptable to real-world datasets.
+
 ## Technical Approach
 
 This pipeline is built using modern NLP tooling, emphasizing structured output and low-overhead deployment.
@@ -10,9 +12,9 @@ This pipeline is built using modern NLP tooling, emphasizing structured output a
 
 The system is built around the **`sieves`** library, which provides a document-based pipeline architecture. The use of `sieves` offers key benefits over direct interaction with raw language models:
 
-1.  **Guaranteed Structured Data Output:** The `sieves` pipeline wraps underlying structured generation tools to ensure that the output is consistently valid and structured (e.g., classifying comments strictly as 'positive' or 'negative'). This is essential because zero- or few-shot language models can often be "finicky" or unreliable when prompted directly.
-2.  **Observability and Debugging:** The document-based structure allows for a clear, step-by-step pipeline, simplifying debugging and tracking the results of the classification process.
-3.  **Unified Interface:** It allows us to seamlessly integrate models from different libraries (in this case, Hugging Face `transformers`) into a coherent workflow.
+1. **Guaranteed Structured Data Output:** The `sieves` pipeline wraps underlying structured generation tools to ensure that the output is consistently valid and structured (e.g., classifying comments strictly as 'positive' or 'negative'). This is essential because zero- or few-shot language models can often be "finicky" or unreliable when prompted directly.
+2. **Observability and Debugging:** The document-based structure allows for a clear, step-by-step pipeline, simplifying debugging and tracking the results of the classification process.
+3. **Unified Interface:** It allows us to seamlessly integrate models from different libraries (in this case, Hugging Face `transformers`) into a coherent workflow.
 
 ### Production Strategy (Hugging Face Inference Endpoints)
 

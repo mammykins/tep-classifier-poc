@@ -42,7 +42,7 @@ Use `uv add` to install the required libraries (`sieves` and `transformers`):
 
 ```bash
 # Adds sieves and transformers to your project environment
-uv add sieves transformers
+uv add sieves transformers gliner2
 ```
 
 ### 3. Run the Pipeline

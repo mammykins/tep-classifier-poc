@@ -2,7 +2,9 @@
 
 This repository contains a **Minimum Viable Product (MVP)** for implementing automated comment analysis on large volumes of institutional feedback, such as surveys collected from pupils, employees, or other stakeholders. The system uses a zero-shot approach to immediately classify free-text comments (simulated here as student feedback) into actionable categories, like **positive** or **negative** sentiment.  
 
-The data is simulated (made-up comments) for demonstration purposes, but the architecture is designed to be easily adaptable to real-world datasets.
+The data is simulated (made-up comments) for demonstration purposes, but the architecture is designed to be easily adaptable to real-world datasets.  
+
+Credit to the folks at [MantisNLP](https://www.linkedin.com/posts/maupson_were-big-fans-of-hugging-face-at-mantisnlp-activity-7393577817621315586-o25X?utm_source=share&utm_medium=member_desktop&rcm=ACoAABrHWH0BwgvC9d69bW6pcmCksXcb41BCv0g) for inspiration on using zero-shot classification for sentiment analysis.
 
 ## Technical Approach
 

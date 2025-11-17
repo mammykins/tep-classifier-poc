@@ -53,6 +53,12 @@ Execute the script using `uv run`. `uv` ensures the script runs in the correct, 
 uv run python sentiment_mvp.py
 ```
 
+### Example Output
+
+![Terminal Output](screenshot.png)
+
+*The classifier automatically analyzes student feedback comments and categorizes them as positive or negative sentiment with confidence scores. In this example, 6 simulated comments are processed in under 15 seconds, demonstrating how the system can quickly identify areas of concern (e.g., "teacher goes too fast", "too much homework") versus praise (e.g., "teacher gives good support") to help schools prioritize improvements.*
+
 ### Notes on Authentication
 
 To run this specific MVP using the publicly available zero-shot classification model (`MoritzLaurer/xtremedistil-l6-h256-zeroshot-v1.1-all-33`), **no Hugging Face API key (`HF_TOKEN`) is required** [Conversation History]. The model weights are loaded locally (or accessed publicly), allowing for immediate testing.

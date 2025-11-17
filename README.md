@@ -6,6 +6,12 @@ The data is simulated (made-up comments) for demonstration purposes, but the arc
 
 Credit to the folks at [MantisNLP](https://www.linkedin.com/posts/maupson_were-big-fans-of-hugging-face-at-mantisnlp-activity-7393577817621315586-o25X?utm_source=share&utm_medium=member_desktop&rcm=ACoAABrHWH0BwgvC9d69bW6pcmCksXcb41BCv0g) for inspiration on using zero-shot classification for sentiment analysis.
 
+### Example Output
+
+![Terminal Output](screenshot.png)
+
+*The classifier automatically analyzes student feedback comments and categorizes them as positive or negative sentiment with confidence scores. In this example, 6 simulated comments are processed in under 15 seconds, demonstrating how the system can quickly identify areas of concern (e.g., "teacher goes too fast", "too much homework") versus praise (e.g., "teacher gives good support") to help schools prioritize improvements.*
+
 ## Technical Approach
 
 This pipeline is built using modern NLP tooling, emphasizing structured output and low-overhead deployment.
@@ -52,12 +58,6 @@ Execute the script using `uv run`. `uv` ensures the script runs in the correct, 
 ```bash
 uv run python sentiment_mvp.py
 ```
-
-### Example Output
-
-![Terminal Output](screenshot.png)
-
-*The classifier automatically analyzes student feedback comments and categorizes them as positive or negative sentiment with confidence scores. In this example, 6 simulated comments are processed in under 15 seconds, demonstrating how the system can quickly identify areas of concern (e.g., "teacher goes too fast", "too much homework") versus praise (e.g., "teacher gives good support") to help schools prioritize improvements.*
 
 ### Notes on Authentication
 

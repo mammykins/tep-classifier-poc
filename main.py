@@ -18,8 +18,8 @@ from transformers import pipeline
 # 2. Define Inputs (Simulated TEP User Feedback)
 # ----------------------------------------------------------------------
 
-# TEP collects feedback from pupils and employees [5].
-# Simulated comments based on educational feedback datasets [7, 8]:
+# TEP collects feedback from pupils and employees.
+# Simulated comments based on educational feedback datasets:
 # Revised comments reflecting language and common issues/praise in UK secondary schools:
 simulated_comments = [
     # Positive feedback (Focus on learning environment/teacher skill)
@@ -49,20 +49,20 @@ CLASSIFICATION_LABELS = ["positive", "negative"]
 
 # We use the Hugging Face zero-shot classification pipeline, which eliminates
 # the need for TEP to manage MLOps infrastructure (Hugging Face Inference
-# Endpoints are a managed solution highly suitable for TEP's capacity) [15-17].
+# Endpoints are a managed solution highly suitable for TEP's capacity).
 classification_model = pipeline(
     "zero-shot-classification",
-    # Using a suitable, lightweight zero-shot model [3, 18]
+    # Using a suitable, lightweight zero-shot model
     model="MoritzLaurer/xtremedistil-l6-h256-zeroshot-v1.1-all-33",
 )
 
 # The sieves Pipeline provides the document-based architecture
-# for observability and guaranteed structured output [19-21].
+# for observability and guaranteed structured output.
 sentiment_pipeline = Pipeline(
     [
         tasks.Classification(
             labels=CLASSIFICATION_LABELS,  # The defined output structure
-            model=classification_model,  # The Hugging Face model wrapper [3]
+            model=classification_model,  # The Hugging Face model wrapper
             task_id="sentiment_analysis",  # Tags the result for later extraction
         )
     ]
